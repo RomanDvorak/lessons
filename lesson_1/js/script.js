@@ -1,19 +1,30 @@
 'use strict';
 
-let budget = +prompt("Ваш бюджет на месяц?");
-let nameOfShop = prompt("Название вашего магазина?");
+let money = +prompt("Ваш бюджет на месяц?");
+let time = prompt("Введите дату в формате YYYY-MM-DD.");
 
-let shopGoods = [];
-let employers = {};
-let mainList = {
-  bud: budget,
-  name: nameOfShop,
-  shopGoods: shopGoods,
-  employers: employers,
-  open: true
+let income = [];
+let expenses = {};
+let optionalExpenses = {};
+let appData = {
+  budget: money,
+  timeData: time,
+  expenses: expenses,
+  optionalExpenses: '',
+  income: income,
+  savings: false
 };
-for (let i = 0; i < 3; i++) {
-  var answer = prompt("Какой тип товаров будем продавать?");
-  shopGoods.push(answer);
+for (let i = 0; i < 2; i++) {
+  var answer1 = prompt("Введите обязательную статью расходов в этом месяце.");
+  var answer2 = prompt("Во сколько обойдется?");
+  /* shopGoods.push(answer); */
+  if (i == 0) {
+    expenses.first = answer1;
+    expenses.second = answer2;
+  }
+  else {
+    expenses.third = answer1;
+    expenses.fourth = answer2;
+  }
 };
-document.write(budget / 30);
+document.write(money / 30);
