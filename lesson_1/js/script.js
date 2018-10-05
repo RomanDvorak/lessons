@@ -14,17 +14,11 @@ let appData = {
   income: income,
   savings: false
 };
-for (let i = 0; i < 2; i++) {
-  var answer1 = prompt("Введите обязательную статью расходов в этом месяце.");
-  var answer2 = prompt("Во сколько обойдется?");
-  /* shopGoods.push(answer); */
-  if (i == 0) {
-    expenses.first = answer1;
-    expenses.second = answer2;
-  }
-  else {
-    expenses.third = answer1;
-    expenses.fourth = answer2;
-  }
-};
+let a1 = prompt("Введите обязательную статью расходов в этом месяце", ""),
+    a2 = prompt("Во сколько обойдётся?", ""),
+    a3 = prompt("Введите обязательную статью расходов в этом месяце", ""),
+    a4 = prompt("Во сколько обойдётся?", "");
+appData.expenses.a1 = a2;
+appData.expenses.a3 = a4;
+
 document.write(money / 30);
