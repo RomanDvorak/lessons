@@ -3,15 +3,12 @@
 let money = +prompt("Ваш бюджет на месяц?");
 let time = prompt("Введите дату в формате YYYY-MM-DD.");
 
-let income = [];
-let expenses = {};
-let optionalExpenses = {};
 let appData = {
   budget: money,
   timeData: time,
-  expenses: expenses,
-  optionalExpenses: '',
-  income: income,
+  expenses: {},
+  optionalExpenses: {},
+  income: [],
   savings: false
 };
 for (let i = 0; i < 2; i++) {
