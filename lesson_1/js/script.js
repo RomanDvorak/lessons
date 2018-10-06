@@ -15,8 +15,8 @@ let a1 = prompt("Введите обязательную статью расхо
     a3 = prompt("Во сколько обойдётся?", ""),
     a2 = prompt("Введите обязательную статью расходов в этом месяце", ""),
     a4 = prompt("Во сколько обойдётся?", "");
-appData.expenses.a1 = a3;
-appData.expenses.a2 = a4;
+appData.expenses[a1] = a3;
+appData.expenses[a2] = a4;
 console.log(appData.expenses);
 
 document.write(money / 30);
