@@ -109,19 +109,12 @@ function checkSavings() {
 
 checkSavings();
 
-let optionalExpenses = {};
 
 function chooseOptExpenses() {
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 1; i <= 3; i++) {
     let answer = prompt("Статья необязательных расходов?");
-    if (i == 0) {
-      optionalExpenses.num1 = answer;
-    } else if (i == 1) {
-      optionalExpenses.num2 = answer;
-    } else {
-      optionalExpenses.num3 = answer;
-    }
+      appData.optionalExpenses[i] = answer;
   }
 
 }
