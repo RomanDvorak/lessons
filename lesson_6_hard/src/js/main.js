@@ -25,16 +25,12 @@ let startBtn = document.getElementById('start'),
 
 let money, time;
 
+
 countBtn.disabled = true;
 sumValue.disabled = true;
 percentValue.disabled = true;
 checkSavings.disabled = true;
 
-for (let i = 0; i < optionalExpensesItem.length; i++) {
-  optionalExpensesItem[i].addEventListener('input', function(){
-    optionalExpensesItem[i].value.replace(/[а-яА-ЯёЁ -]/ig, '');
-  });
-}
 
 startBtn.addEventListener('click', function() {
   time = prompt("Введите дату в формате YYYY-MM-DD.");
@@ -173,3 +169,21 @@ function fullAppData() {
     console.log("Свойство " + key + " имеет значение " + appData[key]);
   }
 };
+
+for (let i = 0; i < expensesItem.length; i++) {
+  if (i % 2 == 0) {
+  expensesItem[i].addEventListener('input', function () {
+    expensesItem[i].value = expensesItem[i].value.replace(/[^а-яА-ЯёЁ -]/ig, '');
+  });
+} else {
+  expensesItem[i].addEventListener('input', function () {
+    expensesItem[i].value = expensesItem[i].value.replace(/[^0-9 -]/ig, '');
+  });
+}
+}
+
+for (let i = 0; i < optionalExpensesItem.length; i++) {
+  optionalExpensesItem[i].addEventListener('input', function () {
+    optionalExpensesItem[i].value = optionalExpensesItem[i].value.replace(/[^а-яА-ЯёЁ -]/ig, '');
+  });
+}
