@@ -32,9 +32,7 @@ checkSavings.disabled = true;
 
 for (let i = 0; i < optionalExpensesItem.length; i++) {
   optionalExpensesItem[i].addEventListener('input', function(){
-   if(optionalExpensesItem[i].value.match(/[0-9A-Za-z]/ig, '')) {
-    optionalExpensesItem[i].value.replaceAll(/[а-яА-ЯёЁ -]/ig, '');
-   }
+    optionalExpensesItem[i].value.replace(/[а-яА-ЯёЁ -]/ig, '');
   });
 }
 
