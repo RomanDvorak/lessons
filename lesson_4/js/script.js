@@ -70,7 +70,6 @@ let appData = {
       while(((typeof(items))!== 'string' || (items == null) || items == '')) {
         items = prompt('Что принесёт дополнительный доход?\n(Перечислите через запятую)', "");
       }
-      if((typeof(items))=== 'string' && (items != null) && items != '') {
         appData.income = items.split(', ');
         let more = prompt("Может что-то ещё?");
         appData.income.push(more);
@@ -79,7 +78,6 @@ let appData = {
         appData.income.forEach(function(item, i, arr) {
           alert("Способы доп. заработка: " + (i+1) + " - " + item );
         });
-    }
     
   }
 };
