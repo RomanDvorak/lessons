@@ -10,25 +10,25 @@ makebr();
 
 let date=new Date();
 
-let seconds = date.getSeconds();
-if (seconds<10) seconds='0'+seconds;
+let s = date.getSeconds().toString();
+if (s.length<2) s='0'+s;
 
-let minutes = date.getMinutes();
-if (minutes<10) minutes='0'+minutes;
+let minutes = date.getMinutes().toString();
+if (minutes.length<2) minutes='0'+minutes;
 
-let hours = date.getHours();
-if (hours<10) hours='0'+hours;
+let hours = date.getHours().toString();
+if (hours.length<2) hours='0'+hours;
 
-let month = date.getMonth()+1;
-if (month<10) month='0'+month;
+let month = (date.getMonth()+1).toString();
+if (month.length<2) month='0'+month;
 
-let day = date.getDate();
-if (day<10) day='0'+day;
+let day = date.getDate().toString();
+if (day.length<2) day='0'+day;
 
 let year = date.getFullYear();
 makebr();
 makebr();
-write(hours+'.'+minutes+'.'+seconds+ ' '+day+'.'+month+'.'+year);
+write(hours+'.'+minutes+'.'+s+ ' '+day+'.'+month+'.'+year);
 
 makebr();
 
