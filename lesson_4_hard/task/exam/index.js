@@ -20,7 +20,7 @@ function getFriendlyNumbers(start, end) {
             if (start < sum1 && sum1 <= end) {
                 let sum2 = sum(sum1);
 
-                if (sum2 == i && sum1 != i && i < sum1) {
+                if (sum2 == i && i < sum1) {
                     arr.push([i, sum1]);
                 }
             } else {
@@ -32,7 +32,6 @@ function getFriendlyNumbers(start, end) {
         return false;
     }
 }
-
 module.exports = {
     firstName: 'Roman',
     secondName: 'Dvorak',
