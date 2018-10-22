@@ -610,7 +610,14 @@ header ul li:before {
 }
 .status-ico {
    width: 50px;
-   margin-top: 15px;
+   vertical-align: middle;
+}
+.status-ico-div {
+  margin-top: 15px;
+}
+.status-ico-div span {
+  vertical-align: middle;
+  margin-left: 15px;
 }
 .overlay {
   position: fixed;

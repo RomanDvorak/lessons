@@ -153,9 +153,9 @@ window.addEventListener('DOMContentLoaded', function() {
   // Form
 
   let message = {
-    loading: '<img src="icons/loading.svg" class="status-ico" alt="loading">',
-    success: '<img src="icons/checked.svg" class="status-ico" alt="checked">',
-    failure: '<img src="icons/error.svg" class="status-ico" alt="fail">'
+    loading: '<div class="status-ico-div"><img src="icons/loading.svg" class="status-ico" alt="loading"><span>Идёт загрузка, подождите...</span></div>',
+    success: '<div class="status-ico-div"><img src="icons/checked.svg" class="status-ico" alt="checked"><span>Заявка успешно оставлена, мы вам перезвоним!</span></div>',
+    failure: '<div class="status-ico-div"><img src="icons/error.svg" class="status-ico" alt="fail"><span>Произошла ошибка, повторите попытку!</span></div>'
   };
 
   let popupForm = document.querySelector('.main-form'),
